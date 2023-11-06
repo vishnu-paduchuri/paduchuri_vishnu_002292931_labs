@@ -72,7 +72,6 @@ public class SupplierWorkAreaJPanel extends javax.swing.JPanel {
         });
 
         btnSupplierProfile.setText("Update Profile");
-        btnSupplierProfile.setEnabled(false);
         btnSupplierProfile.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSupplierProfileActionPerformed(evt);
@@ -152,8 +151,8 @@ public class SupplierWorkAreaJPanel extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
     private void btnManageProductCatalogActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageProductCatalogActionPerformed
         // TODO add your handling code here:
-        ManageProductCatalogJPanel mpcjp = new ManageProductCatalogJPanel(workArea, supplier);
-        workArea.add("ManageProductCatalogJPanel", mpcjp);
+        ManageProductCatalogJPanel manageCatalog = new ManageProductCatalogJPanel(workArea, supplier);
+        workArea.add("ManageProductCatalogJPanel", manageCatalog);
         CardLayout layout = (CardLayout) workArea.getLayout();
         layout.next(workArea);
     }//GEN-LAST:event_btnManageProductCatalogActionPerformed
@@ -168,6 +167,10 @@ public class SupplierWorkAreaJPanel extends javax.swing.JPanel {
 
     private void btnSupplierProfileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSupplierProfileActionPerformed
         // TODO add your handling code here:
+        UpdateSupplierInfoJPanel updateSupplierInfo = new UpdateSupplierInfoJPanel(workArea, supplier);
+        workArea.add("UpdateSupplierJPanel", updateSupplierInfo);
+        CardLayout layout = (CardLayout) workArea.getLayout();
+        layout.next(workArea);
     }//GEN-LAST:event_btnSupplierProfileActionPerformed
 
     private void btnLogOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogOutActionPerformed
